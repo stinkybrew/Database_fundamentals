@@ -1,4 +1,5 @@
 package entity;
+import java.util.Date;
 import javax.persistence.*;
 @Entity
 
@@ -7,7 +8,7 @@ public class Transactions {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int amount;
 	private String Description;
-	private double Timestamp;
+	private Date Timestamp;
 	private int CategoryId;
 	private int SourceAccountId;
 	private int DescriptionAccountId;
