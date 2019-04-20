@@ -1,11 +1,15 @@
 package entity;
 import javax.persistence.*;
-@Entity
+import java.util.*;
 
+@Entity
 public class Category {
 	@Id
 	private int CategoryId;
 	private String CategoryDescription;
+	@OneToMany
+	@JoinColumn
+	private List<Transactions> transactions = new ArrayList<Transactions>();
 	
     public Category() {
     }   	

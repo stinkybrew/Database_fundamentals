@@ -1,5 +1,8 @@
 package entity;
 import javax.persistence.*;
+import java.util.*;
+
+
 @Entity
 public class Account {
 	@Id
@@ -7,6 +10,9 @@ public class Account {
 	
 	private String AccountName;
 	private double Balance;
+	@OneToMany
+	@JoinColumn
+	private List<Transactions> transactions = new ArrayList<Transactions>();
 	
 	public Account() {
 	}
